@@ -18,7 +18,7 @@ function App() {
       <Contact />
       <Footer />
       <AppointmentModal />
-      <div className="pointer-events-none fixed bottom-3 p-4 left-1/2 z-50 -translate-x-1/2 rounded-full bg-orange-700 px-3 py-1 text-md sm:text-md text-white bg-opacity-20  sm:bottom-4 sm:left-auto sm:right-4 sm:translate-x-0">
+      <div className="pointer-events-none fixed bottom-3 py-4 left-1/2 z-50 -translate-x-1/2 rounded-full bg-orange-700 px-4  text-md sm:text-md text-white bg-opacity-10 opacity-50  sm:bottom-4 sm:left-auto sm:right-4 sm:translate-x-0 w-[90%] sm:w-fit">
         Preview made by ShiftDeploy for Sky Dental UK
       </div>
     </div>

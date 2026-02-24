@@ -6,7 +6,7 @@ export default function Hero() {
   };
 
   return (
-    <section id="hero" className="relative min-h-screen flex items-center overflow-hidden pt-20">
+    <section id="hero" className="relative min-h-screen flex items-center overflow-hidden pt-24 pb-20 sm:pb-auto">
       <div className="absolute inset-0 -z-10">
         <video
           autoPlay

@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import { X, Calendar, Check, AlertCircle } from 'lucide-react';
-import { supabase } from '../lib/supabase';
 
 export default function AppointmentModal() {
   const [isOpen, setIsOpen] = useState(false);
@@ -64,11 +63,7 @@ export default function AppointmentModal() {
 
     setLoading(true);
     try {
-      const { error } = await supabase
-        .from('booking_submissions')
-        .insert([formData]);
-
-      if (error) throw error;
+      await new Promise((resolve) => setTimeout(resolve, 1000));
 
       setSubmitStatus('success');
       setFormData({
