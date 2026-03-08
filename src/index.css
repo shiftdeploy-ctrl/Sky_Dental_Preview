@@ -93,19 +93,19 @@ h6 {
 
 /* n8n chat theme overrides (applies to internal header/messages/input too) */
 .sd-n8n-chat {
-	--chat--color--primary: #0891b2;
-	--chat--color--primary-shade-50: #0e7490;
-	--chat--color--primary--shade-100: #155e75;
-	--chat--color--secondary: #0284c7;
-	--chat--color-secondary-shade-50: #0369a1;
-	--chat--color-white: #ffffff;
-	--chat--color-light: #eef2f7;
-	--chat--color-light-shade-50: #dfe7f2;
-	--chat--color-light-shade-100: #c2d0e0;
-	--chat--color-medium: #c8d1dd;
-	--chat--color-dark: #0f172a;
-	--chat--color-disabled: #b8c3d2;
-	--chat--color-typing: #0f172a;
+	--chat--color--primary: var(--sd-primary);
+	--chat--color--primary-shade-50: var(--sd-primary-deep);
+	--chat--color--primary--shade-100: var(--sd-ink);
+	--chat--color--secondary: var(--sd-primary);
+	--chat--color-secondary-shade-50: var(--sd-primary-deep);
+	--chat--color-white: var(--sd-surface);
+	--chat--color-light: var(--sd-surface);
+	--chat--color-light-shade-50: var(--sd-surface);
+	--chat--color-light-shade-100: var(--sd-surface);
+	--chat--color-medium: var(--sd-ink-soft);
+	--chat--color-dark: var(--sd-ink);
+	--chat--color-disabled: var(--sd-ink-soft);
+	--chat--color-typing: var(--sd-ink);
 
 	--chat--spacing: 1rem;
 	--chat--border-radius: 18px;
@@ -117,15 +117,15 @@ h6 {
 	--chat--window--bottom: 1rem;
 	--chat--window--right: 1rem;
 	--chat--window--z-index: 60;
-	--chat--window--border: 1px solid rgba(125, 211, 252, 0.55);
+	--chat--window--border: 1px solid var(--sd-primary);
 	--chat--window--border-radius: 26px;
 	--chat--window--margin-bottom: 0.75rem;
 
 	--chat--header-height: auto;
 	--chat--header--padding: 1.1rem 1rem 0.95rem;
-	--chat--header--background: linear-gradient(135deg, #0b1538 0%, #13285a 62%, #163874 100%);
-	--chat--header--color: #f8fbff;
-	--chat--header--border-bottom: 1px solid rgba(147, 197, 253, 0.3);
+	--chat--header--background: linear-gradient(135deg, var(--sd-primary-deep) 0%, var(--sd-primary) 100%);
+	--chat--header--color: var(--sd-surface);
+	--chat--header--border-bottom: 1px solid var(--sd-primary);
 	--chat--heading--font-size: 2.4rem;
 	--chat--subtitle--font-size: 1.05rem;
 	--chat--subtitle--line-height: 1.6;
@@ -135,48 +135,60 @@ h6 {
 	--chat--message--border-radius: 14px;
 	--chat--message-line-height: 1.55;
 	--chat--message--margin-bottom: 0.9rem;
-	--chat--message--bot--background: #ffffff;
-	--chat--message--bot--color: #0f172a;
-	--chat--message--bot--border: 1px solid #d9e5f3;
-	--chat--message--user--background: linear-gradient(135deg, #06b6d4, #0284c7);
-	--chat--message--user--color: #ffffff;
+	--chat--message--bot--background: var(--sd-surface);
+	--chat--message--bot--color: var(--sd-ink);
+	--chat--message--bot--border: 1px solid var(--sd-primary);
+	--chat--message--user--background: linear-gradient(135deg, var(--sd-primary), var(--sd-primary-deep));
+	--chat--message--user--color: var(--sd-surface);
 	--chat--message--user--border: none;
 	--chat--messages-list--padding: 1rem;
 
 	--chat--toggle--size: 62px;
-	--chat--toggle--background: linear-gradient(135deg, #06b6d4, #0284c7);
-	--chat--toggle--hover--background: linear-gradient(135deg, #0891b2, #0369a1);
-	--chat--toggle--active--background: #075985;
-	--chat--toggle--color: #ffffff;
+	--chat--toggle--background: linear-gradient(135deg, var(--sd-primary), var(--sd-primary-deep));
+	--chat--toggle--hover--background: linear-gradient(135deg, var(--sd-primary-deep), var(--sd-primary));
+	--chat--toggle--active--background: var(--sd-primary-deep);
+	--chat--toggle--color: var(--sd-surface);
 
 	--chat--textarea--height: 56px;
 	--chat--input--font-size: 1.05rem;
 	--chat--input--border-radius: 0;
 	--chat--input--padding: 1rem;
-	--chat--input--background: #ffffff;
+	--chat--input--background: var(--sd-surface);
 	--chat--input--line-height: 1.5;
 	--chat--input--placeholder--font-size: 1.05rem;
 
 	--chat--input--send--button--background: transparent;
-	--chat--input--send--button--color: #0284c7;
-	--chat--input--send--button--background-hover: #e0f2fe;
-	--chat--input--send--button--color-hover: #0369a1;
+	--chat--input--send--button--color: var(--sd-primary);
+	--chat--input--send--button--background-hover: var(--sd-surface);
+	--chat--input--send--button--color-hover: var(--sd-primary-deep);
 
-	--chat--body--background: #f4f7fb;
-	--chat--footer--background: #f4f7fb;
-	--chat--footer--color: #334155;
+	--chat--body--background: var(--sd-surface);
+	--chat--footer--background: var(--sd-surface);
+	--chat--footer--color: var(--sd-ink-soft);
 }
 
-.sd-n8n-chat .n8n-chat,
+/* .sd-n8n-chat .n8n-chat,
 .sd-n8n-chat .chat-window {
-	box-shadow: 0 28px 70px -30px rgba(2, 132, 199, 0.5);
+	box-shadow: 0 28px 70px -30px var(--sd-primary);
 	backdrop-filter: blur(16px);
-}
+} */
 
 .sd-n8n-chat .chat-window-toggle,
 .sd-n8n-chat .chat-window-toggle button {
 	border-radius: 999px;
-	box-shadow: 0 18px 30px -15px rgba(14, 116, 144, 0.5);
+	box-shadow: 0 18px 30px -15px var(--sd-primary-deep);
+}
+
+/* Force sender bubble contrast in case upstream stylesheet wins variable cascade. */
+.sd-n8n-chat .chat-message.chat-message-from-user:not(.chat-message-transparent) {
+	background-color: var(--sd-primary-deep) !important;
+	border: 1px solid var(--sd-primary) !important;
+	color: var(--sd-surface) !important;
+}
+
+.sd-n8n-chat .chat-message.chat-message-from-user .chat-message-markdown,
+.sd-n8n-chat .chat-message.chat-message-from-user .chat-message-markdown * {
+	color: inherit !important;
 }
 
 @media (max-width: 640px) {
