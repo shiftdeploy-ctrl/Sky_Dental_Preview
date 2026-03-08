@@ -32,7 +32,9 @@ export default function Navbar() {
   return (
     <nav
       className={`fixed w-full z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white shadow-lg' : 'bg-white/95 backdrop-blur-sm'
+        isScrolled
+          ? 'border-b border-white/60 bg-white/90 shadow-lg shadow-cyan-900/10 backdrop-blur-md'
+          : 'bg-white/70 backdrop-blur-md'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -40,7 +42,7 @@ export default function Navbar() {
           <div className="flex items-center">
             <button
               onClick={() => scrollToSection('hero')}
-              className="text-2xl font-bold text-teal-600 hover:text-teal-700 transition-colors"
+              className="text-2xl font-bold text-cyan-700 transition-colors hover:text-cyan-800"
             >
               Sky Dental
             </button>
@@ -51,14 +53,14 @@ export default function Navbar() {
               <button
                 key={link.id}
                 onClick={() => scrollToSection(link.id)}
-                className="text-gray-700 hover:text-teal-600 font-medium transition-colors"
+                className="text-slate-700 hover:text-cyan-700 font-medium transition-colors"
               >
                 {link.name}
               </button>
             ))}
             <button
               onClick={() => scrollToSection('contact')}
-              className="bg-teal-600 text-white px-6 py-2.5 rounded-lg hover:bg-teal-700 transition-all transform hover:scale-105 font-medium shadow-md"
+              className="rounded-full bg-gradient-to-r from-cyan-500 to-sky-600 px-6 py-2.5 font-semibold text-white shadow-lg shadow-cyan-600/25 transition-all hover:-translate-y-0.5 hover:shadow-cyan-700/35"
             >
               Book Now
             </button>
@@ -67,7 +69,7 @@ export default function Navbar() {
           <div className="md:hidden">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="text-gray-700 hover:text-teal-600"
+              className="text-slate-700 hover:text-cyan-700"
             >
               {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
             </button>
@@ -76,26 +78,26 @@ export default function Navbar() {
       </div>
 
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-white border-t border-gray-200 shadow-lg">
+        <div className="md:hidden border-t border-slate-200/80 bg-white/95 shadow-lg backdrop-blur-md">
           <div className="px-4 py-4 space-y-3">
             {navLinks.map((link) => (
               <button
                 key={link.id}
                 onClick={() => scrollToSection(link.id)}
-                className="block w-full text-left text-gray-700 hover:text-teal-600 font-medium py-2"
+                className="block w-full py-2 text-left font-medium text-slate-700 hover:text-cyan-700"
               >
                 {link.name}
               </button>
             ))}
             <button
               onClick={() => scrollToSection('contact')}
-              className="w-full bg-teal-600 text-white px-6 py-3 rounded-lg hover:bg-teal-700 transition-colors font-medium"
+              className="w-full rounded-full bg-gradient-to-r from-cyan-500 to-sky-600 px-6 py-3 font-semibold text-white"
             >
               Book Now
             </button>
             <a
               href="tel:02088881002"
-              className="flex items-center justify-center gap-2 w-full border-2 border-teal-600 text-teal-600 px-6 py-3 rounded-lg hover:bg-teal-50 transition-colors font-medium"
+              className="flex w-full items-center justify-center gap-2 rounded-full border-2 border-cyan-600 px-6 py-3 font-semibold text-cyan-700 transition-colors hover:bg-cyan-50"
             >
               <Phone size={18} />
               020 8888 1002

@@ -6,7 +6,7 @@ export default function Hero() {
   };
 
   return (
-    <section id="hero" className="relative min-h-screen flex items-center overflow-hidden pt-24 pb-20 sm:pb-auto">
+    <section id="hero" className="relative flex min-h-screen items-center overflow-hidden pt-24 pb-20">
       <div className="absolute inset-0 -z-10">
         <video
           autoPlay
@@ -20,55 +20,55 @@ export default function Hero() {
             type="video/mp4"
           />
         </video>
-        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/70 to-black/40"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-[#031225]/85 via-[#06203a]/70 to-[#023047]/40"></div>
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[calc(100vh-80px)]">
           <div className="text-left">
-            <div className="inline-flex items-center gap-2 bg-white/15 backdrop-blur-md px-4 py-2 rounded-full mb-6 border border-white/20">
-              <Sparkles size={18} className="text-teal-300" />
-              <span className="text-white text-sm font-semibold">Premium Dental Care in London</span>
+            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-4 py-2 backdrop-blur-md">
+              <Sparkles size={18} className="text-cyan-300" />
+              <span className="text-sm font-semibold text-white">Premium Dental Care in London</span>
             </div>
 
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6">
+            <h1 className="mb-6 text-5xl font-bold leading-tight text-white sm:text-6xl lg:text-7xl">
               Your Smile Deserves the{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-300 to-cyan-300">
+              <span className="bg-gradient-to-r from-cyan-300 via-sky-200 to-blue-200 bg-clip-text text-transparent">
                 Best Care
               </span>
             </h1>
 
-            <p className="text-lg sm:text-xl text-gray-100 mb-10 leading-relaxed max-w-xl">
+            <p className="mb-10 max-w-xl text-lg leading-relaxed text-slate-100 sm:text-xl">
               Experience premium dental treatments with expert dentists in North London. Modern facilities, compassionate care, and guaranteed results.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
               <button
                 onClick={scrollToContact}
-                className="bg-gradient-to-r from-teal-500 to-teal-600 text-white px-8 sm:px-10 py-4 rounded-xl hover:from-teal-600 hover:to-teal-700 transition-all transform hover:scale-105 font-bold text-lg shadow-2xl flex items-center justify-center gap-3 group"
+                className="group flex items-center justify-center gap-3 rounded-xl bg-gradient-to-r from-cyan-500 to-sky-600 px-8 py-4 text-lg font-bold text-white shadow-2xl shadow-cyan-700/30 transition-all hover:-translate-y-0.5 hover:from-cyan-600 hover:to-sky-700 sm:px-10"
               >
                 <Calendar size={24} className="group-hover:rotate-12 transition-transform" />
                 Book Appointment Now
               </button>
               <a
                 href="tel:02088881002"
-                className="border-2 border-white text-white px-8 sm:px-10 py-4 rounded-xl hover:bg-white/10 backdrop-blur-sm transition-all font-bold text-lg flex items-center justify-center gap-3 group"
+                className="group flex items-center justify-center gap-3 rounded-xl border-2 border-white/90 px-8 py-4 text-lg font-bold text-white backdrop-blur-sm transition-all hover:bg-white/10 sm:px-10"
               >
                 <Phone size={24} className="group-hover:animate-pulse" />
                 Call Now
               </a>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-8 text-gray-200">
+            <div className="flex flex-col gap-8 text-gray-200 sm:flex-row">
               <div className="flex items-start gap-3">
-                <MapPin size={24} className="text-teal-300 mt-1 flex-shrink-0" />
+                <MapPin size={24} className="mt-1 flex-shrink-0 text-cyan-300" />
                 <div>
                   <p className="font-semibold text-white">Visit Us</p>
                   <span className="text-sm">94 Turnpike Ln, London N8 0PH</span>
                 </div>
               </div>
               <div className="flex items-start gap-3">
-                <Phone size={24} className="text-teal-300 mt-1 flex-shrink-0" />
+                <Phone size={24} className="mt-1 flex-shrink-0 text-cyan-300" />
                 <div>
                   <p className="font-semibold text-white">Contact</p>
                   <span className="text-sm">020 8888 1002</span>
